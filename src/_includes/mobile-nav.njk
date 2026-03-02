@@ -1,0 +1,54 @@
+<nav
+  id="mobile-nav"
+  class="fixed top-0 left-0 h-full w-[280px] bg-primary z-50 transform transition-transform duration-300 md:hidden"
+  :class="{ '-translate-x-full': !mobileMenuOpen, 'translate-x-0': mobileMenuOpen }"
+  style="transform: translateX(-100%)"
+>
+  <div class="flex flex-col h-full">
+
+    <!-- ヘッダー -->
+    <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+      <span class="font-display text-cream text-xl font-bold">大東熔材株式会社</span>
+      <button @click="mobileMenuOpen = false" class="text-cream/50 hover:text-cream transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- メニュー -->
+    <div class="flex-1 overflow-y-auto">
+      <a href="/shohin/"      class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        取扱商品
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/kaisha-joho/" class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        会社情報
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/access/"      class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        アクセス
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/contact/"     class="flex items-center justify-between px-6 py-4 text-accent font-sans text-sm font-medium border-b border-white/10 hover:bg-white/5 transition-colors">
+        お問い合わせ
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- フッター -->
+    <div class="px-6 py-5 border-t border-white/10">
+      <p class="text-cream/30 text-xs font-sans">{{ site.address }}</p>
+      <a href="tel:{{ site.tel }}" class="text-cream/50 text-sm font-en mt-1 block hover:text-cream transition-colors">{{ site.tel }}</a>
+    </div>
+
+  </div>
+</nav>

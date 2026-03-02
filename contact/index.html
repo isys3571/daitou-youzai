@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 大東熔材株式会社</title>
+  <meta name="description" content="大東熔材株式会社は、大阪府東大阪市に拠点を置く溶接機材・工業用高圧ガス・工作機械の専門商社です。昭和36年（1961年）創業。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;600;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind.css">
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }" class="bg-cream overflow-x-hidden">
+
+  <nav
+  id="mobile-nav"
+  class="fixed top-0 left-0 h-full w-[280px] bg-primary z-50 transform transition-transform duration-300 md:hidden"
+  :class="{ '-translate-x-full': !mobileMenuOpen, 'translate-x-0': mobileMenuOpen }"
+  style="transform: translateX(-100%)"
+>
+  <div class="flex flex-col h-full">
+
+    <!-- ヘッダー -->
+    <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+      <span class="font-display text-cream text-xl font-bold">大東熔材株式会社</span>
+      <button @click="mobileMenuOpen = false" class="text-cream/50 hover:text-cream transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- メニュー -->
+    <div class="flex-1 overflow-y-auto">
+      <a href="/shohin/"      class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        取扱商品
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/kaisha-joho/" class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        会社情報
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/access/"      class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        アクセス
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="/contact/"     class="flex items-center justify-between px-6 py-4 text-accent font-sans text-sm font-medium border-b border-white/10 hover:bg-white/5 transition-colors">
+        お問い合わせ
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- フッター -->
+    <div class="px-6 py-5 border-t border-white/10">
+      <p class="text-cream/30 text-xs font-sans">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
+      <a href="tel:06-XXXX-XXXX" class="text-cream/50 text-sm font-en mt-1 block hover:text-cream transition-colors">06-XXXX-XXXX</a>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- モバイルメニュー用オーバーレイ -->
+  <div
+    x-show="mobileMenuOpen"
+    @click="mobileMenuOpen = false"
+    class="fixed inset-0 bg-black/50 z-30 md:hidden"
+    x-transition:enter="transition-opacity duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition-opacity duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    style="display:none"
+  ></div>
+
+  <div
+    id="container"
+    class="transition-transform duration-300"
+    :class="{ 'translate-x-[280px]': mobileMenuOpen }"
+  >
+    <header class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+  <div class="container">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <!-- ロゴ -->
+      <a href="/" class="flex items-baseline gap-2 group">
+        <span class="font-display text-primary text-2xl md:text-3xl font-bold leading-none group-hover:text-accent transition-colors duration-300">大東熔材</span>
+        <span class="font-sans text-body/40 text-xs tracking-wider hidden sm:inline">株式会社</span>
+      </a>
+
+      <!-- デスクトップナビ -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/shohin/"
+           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 ">
+          取扱商品
+        </a>
+        <a href="/kaisha-joho/"
+           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 ">
+          会社情報
+        </a>
+        <a href="/access/"
+           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 ">
+          アクセス
+        </a>
+        <a href="/contact/"
+           class="font-sans text-sm bg-accent text-white px-5 py-2.5 hover:bg-accent/85 transition-colors duration-200">
+          お問い合わせ
+        </a>
+      </nav>
+
+      <!-- ハンバーガー（モバイル） -->
+      <button
+        @click.prevent="mobileMenuOpen = !mobileMenuOpen"
+        class="md:hidden p-2 text-primary"
+        aria-label="メニューを開く"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" style="display:none"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <div class="container py-24 text-center">
+  <h1 class="font-display text-primary text-4xl mb-4">お問い合わせ</h1>
+  <p class="font-sans text-body/50">（準備中）</p>
+</div>
+
+    </main>
+
+    <footer class="bg-primary">
+  <div class="container py-14 md:py-16">
+    <div class="grid md:grid-cols-3 gap-10 md:gap-12 pb-10 border-b border-white/10">
+
+      <!-- 会社情報 -->
+      <div>
+        <div class="font-display text-cream text-2xl font-bold mb-1">大東熔材株式会社</div>
+        <div class="font-en text-accent/70 text-xs tracking-widest mb-5">DAITOU YOUZAI CO., LTD.</div>
+        <address class="text-cream/50 font-sans text-sm leading-7 not-italic">
+          〒577-0016 大阪府東大阪市長田西4丁目4番3号<br>
+          TEL：<a href="tel:06-XXXX-XXXX" class="hover:text-cream transition-colors">06-XXXX-XXXX</a>
+        </address>
+      </div>
+
+      <!-- ナビ -->
+      <div>
+        <h4 class="font-en text-cream/30 text-xs tracking-[0.25em] uppercase mb-5">Navigation</h4>
+        <nav class="flex flex-col gap-3">
+          <a href="/"              class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">トップページ</a>
+          <a href="/shohin/"       class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">取扱商品</a>
+          <a href="/kaisha-joho/"  class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">会社情報</a>
+          <a href="/access/"       class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">アクセス</a>
+          <a href="/contact/"      class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">お問い合わせ</a>
+        </nav>
+      </div>
+
+      <!-- Since -->
+      <div class="md:text-right flex md:flex-col md:items-end items-start gap-4">
+        <div>
+          <div class="font-en font-bold text-white/8 text-[5rem] leading-none select-none">1961</div>
+          <div class="font-en text-cream/20 text-xs tracking-widest">SINCE SHOWA 36</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-6 text-cream/20 font-sans text-xs">
+      &copy; 大東熔材株式会社. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+</html>

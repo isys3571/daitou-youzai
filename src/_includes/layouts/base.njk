@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or '大東熔材株式会社は、大阪府東大阪市に拠点を置く溶接機材・工業用高圧ガス・工作機械の専門商社です。昭和36年（1961年）創業。' }}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;600;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind.css">
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }" class="bg-cream overflow-x-hidden">
+
+  {% include "mobile-nav.njk" %}
+
+  <!-- モバイルメニュー用オーバーレイ -->
+  <div
+    x-show="mobileMenuOpen"
+    @click="mobileMenuOpen = false"
+    class="fixed inset-0 bg-black/50 z-30 md:hidden"
+    x-transition:enter="transition-opacity duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition-opacity duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    style="display:none"
+  ></div>
+
+  <div
+    id="container"
+    class="transition-transform duration-300"
+    :class="{ 'translate-x-[280px]': mobileMenuOpen }"
+  >
+    {% include "header.njk" %}
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+  </div>
+
+</body>
+</html>

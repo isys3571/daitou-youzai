@@ -1,0 +1,41 @@
+<footer class="bg-primary">
+  <div class="container py-14 md:py-16">
+    <div class="grid md:grid-cols-3 gap-10 md:gap-12 pb-10 border-b border-white/10">
+
+      <!-- 会社情報 -->
+      <div>
+        <div class="font-display text-cream text-2xl font-bold mb-1">大東熔材株式会社</div>
+        <div class="font-en text-accent/70 text-xs tracking-widest mb-5">DAITOU YOUZAI CO., LTD.</div>
+        <address class="text-cream/50 font-sans text-sm leading-7 not-italic">
+          {{ site.address }}<br>
+          TEL：<a href="tel:{{ site.tel }}" class="hover:text-cream transition-colors">{{ site.tel }}</a>
+        </address>
+      </div>
+
+      <!-- ナビ -->
+      <div>
+        <h4 class="font-en text-cream/30 text-xs tracking-[0.25em] uppercase mb-5">Navigation</h4>
+        <nav class="flex flex-col gap-3">
+          <a href="/"              class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">トップページ</a>
+          <a href="/shohin/"       class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">取扱商品</a>
+          <a href="/kaisha-joho/"  class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">会社情報</a>
+          <a href="/access/"       class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">アクセス</a>
+          <a href="/contact/"      class="text-cream/50 font-sans text-sm hover:text-cream transition-colors">お問い合わせ</a>
+        </nav>
+      </div>
+
+      <!-- Since -->
+      <div class="md:text-right flex md:flex-col md:items-end items-start gap-4">
+        <div>
+          <div class="font-en font-bold text-white/8 text-[5rem] leading-none select-none">1961</div>
+          <div class="font-en text-cream/20 text-xs tracking-widest">SINCE SHOWA 36</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-6 text-cream/20 font-sans text-xs">
+      &copy; {{ site.name }}. All rights reserved.
+    </div>
+  </div>
+</footer>
