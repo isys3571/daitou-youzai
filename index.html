@@ -142,236 +142,149 @@
 
 
     <main>
-      
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="relative bg-primary min-h-screen flex items-center overflow-hidden">
-
-  <!-- ドットグリッド背景 -->
-  <div class="absolute inset-0 pointer-events-none"
-       style="background-image: radial-gradient(circle, rgba(247,245,242,0.07) 1px, transparent 1px);
-              background-size: 32px 32px;">
-  </div>
-
-  <!-- 左端のアクセントバー -->
-  <div class="absolute left-0 top-0 bottom-0 w-1 bg-accent"></div>
-
-  <!-- "1961" 大きな透かし文字（右側） -->
-  <div class="absolute right-0 top-0 bottom-0 flex items-center pointer-events-none select-none overflow-hidden pr-4 md:pr-0">
-    <span class="font-en font-bold leading-none text-[clamp(8rem,28vw,22rem)] text-white/[0.035]">1961</span>
-  </div>
-
-  <!-- コンテンツ -->
-  <div class="container relative z-10 py-28 md:py-36">
-    <div class="max-w-2xl pl-4 md:pl-6">
-
-      <!-- バッジ -->
-      <div class="flex items-center gap-3 mb-10 opacity-0 animate-fade-up" style="animation-delay:0s; animation-fill-mode:forwards;">
-        <div class="w-8 h-px bg-accent"></div>
-        <span class="font-en text-accent text-xs tracking-[0.3em] uppercase">Since 1961 · Higashi-Osaka</span>
-      </div>
-
-      <!-- メイン見出し -->
-      <h1 class="font-display text-cream leading-[1.25] mb-7 opacity-0 animate-fade-up" style="animation-delay:0.15s; animation-fill-mode:forwards;">
-        <span class="block text-[clamp(1.8rem,5vw,3.75rem)]">東大阪のものづくりを、</span>
-        <span class="block text-[clamp(1.8rem,5vw,3.75rem)]">支え続けて六十余年。</span>
+      <section class="bg-primary py-16 md:py-24">
+  <div class="container grid lg:grid-cols-3 gap-8 md:gap-10 items-start">
+    <div class="lg:col-span-2">
+      <p class="font-en text-accent text-xs tracking-[0.25em] uppercase mb-5">For Manufacturing Sites In Higashi-Osaka</p>
+      <h1 class="font-display text-cream text-[clamp(2rem,4vw,3.4rem)] leading-[1.3] mb-6">
+        溶接資材・工業用ガスを、
+        <br>
+        現場の段取りに合わせてご提案します。
       </h1>
-
-      <!-- サブコピー -->
-      <p class="font-sans text-cream/60 text-base md:text-lg leading-loose mb-11 opacity-0 animate-fade-up" style="animation-delay:0.3s; animation-fill-mode:forwards;">
-        溶接機材・工業用高圧ガス・工作機械の専門商社。<br class="hidden sm:block">
-        プロの現場に必要な資材を、確かな品質でお届けします。
+      <p class="font-sans text-cream/70 leading-8 mb-8 max-w-3xl">
+        大東熔材株式会社は、東大阪を拠点に製造業のお客様へ溶接機材・工業用高圧ガス・工作機械を供給しています。
+        創業1961年。日々の補充から定期調達まで、現場で使う資材を実務目線でサポートします。
       </p>
-
-      <!-- CTA -->
-      <div class="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up" style="animation-delay:0.45s; animation-fill-mode:forwards;">
-        <a href="/contact/"
-           class="inline-flex items-center justify-center gap-2 bg-accent text-white font-sans font-medium text-sm px-8 py-4 hover:bg-accent/85 transition-colors duration-300">
-          お問い合わせ
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="tel:06-XXXX-XXXX" class="inline-flex items-center justify-center bg-accent text-white font-en font-bold text-lg px-6 py-4 hover:bg-accent/85 transition-colors">
+          電話で在庫確認する
         </a>
-        <a href="/shohin/"
-           class="inline-flex items-center justify-center gap-2 border border-cream/25 text-cream font-sans font-medium text-sm px-8 py-4 hover:border-cream/50 hover:bg-white/5 transition-all duration-300">
-          取扱商品を見る
+        <a href="/contact/" class="inline-flex items-center justify-center border border-cream/30 text-cream font-sans text-sm px-6 py-4 hover:border-cream/60 hover:bg-white/5 transition-all">
+          見積・問い合わせフォーム
         </a>
       </div>
-
     </div>
-  </div>
 
-  <!-- スクロールインジケーター -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-    <span class="font-en text-cream/20 text-[0.6rem] tracking-[0.3em] uppercase">Scroll</span>
-    <div class="w-px h-10 bg-cream/10 overflow-hidden relative">
-      <div class="absolute inset-x-0 top-0 h-1/2 bg-accent/60 animate-scroll-line"></div>
-    </div>
+    <aside class="bg-white p-6 md:p-7 border-t-4 border-accent shadow-sm">
+      <h2 class="font-display text-primary text-xl mb-4">クイック案内</h2>
+      <dl class="space-y-4 text-sm font-sans">
+        <div>
+          <dt class="text-body/50 mb-1">電話</dt>
+          <dd class="font-en text-primary text-2xl">06-XXXX-XXXX</dd>
+        </div>
+        <div>
+          <dt class="text-body/50 mb-1">所在地</dt>
+          <dd class="text-body/80 leading-7">〒577-0016 大阪府東大阪市長田西4丁目4番3号</dd>
+        </div>
+        <div>
+          <dt class="text-body/50 mb-1">事業内容</dt>
+          <dd class="text-body/80 leading-7">溶接機材 / 工業用高圧ガス / 工作機械・工具</dd>
+        </div>
+      </dl>
+    </aside>
   </div>
-
 </section>
 
+<section class="bg-white py-14 md:py-16 border-b border-gray-100">
+  <div class="container grid md:grid-cols-3 gap-4 md:gap-6">
+    <div class="border border-gray-200 p-5">
+      <p class="font-en text-body/40 text-xs tracking-[0.2em] uppercase mb-2">Since</p>
+      <p class="font-en text-primary text-4xl leading-none">1961</p>
+      <p class="font-sans text-body/60 text-sm mt-2">昭和36年創業</p>
+    </div>
+    <div class="border border-gray-200 p-5">
+      <p class="font-en text-body/40 text-xs tracking-[0.2em] uppercase mb-2">Area</p>
+      <p class="font-display text-primary text-2xl leading-tight">東大阪中心</p>
+      <p class="font-sans text-body/60 text-sm mt-2">大阪府内の製造業・建設業のお客様に対応</p>
+    </div>
+    <div class="border border-gray-200 p-5">
+      <p class="font-en text-body/40 text-xs tracking-[0.2em] uppercase mb-2">Business</p>
+      <p class="font-en text-primary text-4xl leading-none">B2B</p>
+      <p class="font-sans text-body/60 text-sm mt-2">現場・工場向けの専門商社</p>
+    </div>
+  </div>
+</section>
 
-<!-- ============================================================
-     取扱商品
-     ============================================================ -->
-<section class="bg-cream py-20 md:py-28">
+<section class="bg-cream py-20 md:py-24">
   <div class="container">
-
-    <!-- セクションヘッダー -->
-    <div class="mb-14">
-      <span class="font-en text-accent text-xs tracking-[0.3em] uppercase block mb-3">Products</span>
-      <h2 class="font-display text-primary text-3xl md:text-4xl">取扱商品</h2>
-      <div class="w-10 h-0.5 bg-accent mt-4"></div>
+    <div class="mb-10">
+      <p class="font-en text-accent text-xs tracking-[0.25em] uppercase mb-3">Main Products</p>
+      <h2 class="font-display text-primary text-3xl md:text-4xl">主要取扱品目</h2>
     </div>
-
-    <!-- カードグリッド -->
-    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-
-      <!-- 01 溶接機材 -->
-      <article class="group bg-white border-t-4 border-accent p-8 hover:shadow-xl transition-shadow duration-300">
-        <div class="font-en font-bold text-accent/15 text-7xl leading-none mb-6 group-hover:text-accent/25 transition-colors duration-300 select-none">01</div>
-        <h3 class="font-display text-primary text-2xl mb-3">溶接機材</h3>
-        <p class="font-sans text-body/60 text-sm leading-7">
-          溶接機器・溶接棒・ワイヤー・各種消耗品から部品まで。プロの現場で求められる品質の溶接関連資材を幅広く取り揃えています。
-        </p>
-        <div class="mt-8 flex items-center gap-2 text-accent text-sm font-sans group-hover:gap-3 transition-all duration-200">
-          <a href="/shohin/">詳しく見る</a>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="bg-white p-7 border-t-4 border-accent">
+        <h3 class="font-display text-primary text-2xl mb-4">溶接機材</h3>
+        <ul class="font-sans text-body/70 text-sm leading-7 list-disc list-inside space-y-1">
+          <li>溶接機・切断機</li>
+          <li>溶接棒・溶接ワイヤ</li>
+          <li>トーチ・ノズル・チップ等の消耗品</li>
+          <li>安全保護具</li>
+        </ul>
       </article>
-
-      <!-- 02 工業用高圧ガス -->
-      <article class="group bg-white border-t-4 border-primary p-8 hover:shadow-xl transition-shadow duration-300">
-        <div class="font-en font-bold text-primary/10 text-7xl leading-none mb-6 group-hover:text-primary/20 transition-colors duration-300 select-none">02</div>
-        <h3 class="font-display text-primary text-2xl mb-3">工業用高圧ガス</h3>
-        <p class="font-sans text-body/60 text-sm leading-7">
-          アセチレン・酸素・炭酸ガスなどの工業用高圧ガスを取り扱っています。大阪高圧ガス熔材協同組合会員として、安定的な供給に努めています。
-        </p>
-        <div class="mt-8 flex items-center gap-2 text-primary text-sm font-sans group-hover:gap-3 transition-all duration-200">
-          <a href="/shohin/">詳しく見る</a>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </div>
+      <article class="bg-white p-7 border-t-4 border-primary">
+        <h3 class="font-display text-primary text-2xl mb-4">工業用高圧ガス</h3>
+        <ul class="font-sans text-body/70 text-sm leading-7 list-disc list-inside space-y-1">
+          <li>酸素</li>
+          <li>アセチレン</li>
+          <li>炭酸ガス</li>
+          <li>その他工業用ガス</li>
+        </ul>
       </article>
-
-      <!-- 03 工作機械・工具 -->
-      <article class="group bg-white border-t-4 border-body/20 p-8 hover:shadow-xl transition-shadow duration-300">
-        <div class="font-en font-bold text-body/8 text-7xl leading-none mb-6 group-hover:text-body/15 transition-colors duration-300 select-none">03</div>
-        <h3 class="font-display text-primary text-2xl mb-3">工作機械・工具</h3>
-        <p class="font-sans text-body/60 text-sm leading-7">
-          電動工具・切断機・グラインダーをはじめとした各種機械器具も取り扱っています。現場のご要望に合わせてご提案いたします。
-        </p>
-        <div class="mt-8 flex items-center gap-2 text-body/50 text-sm font-sans group-hover:gap-3 transition-all duration-200">
-          <a href="/shohin/">詳しく見る</a>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </div>
+      <article class="bg-white p-7 border-t-4 border-body/20">
+        <h3 class="font-display text-primary text-2xl mb-4">工作機械・工具</h3>
+        <ul class="font-sans text-body/70 text-sm leading-7 list-disc list-inside space-y-1">
+          <li>電動工具</li>
+          <li>切断・研磨工具</li>
+          <li>作業工具・治具</li>
+          <li>工場向け機械器具</li>
+        </ul>
       </article>
-
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     会社の強み
-     ============================================================ -->
-<section class="bg-primary py-20 md:py-28 relative overflow-hidden">
-
-  <!-- ハッチングパターン背景 -->
-  <div class="absolute inset-0 pointer-events-none opacity-[0.03]"
-       style="background-image: repeating-linear-gradient(
-         -45deg,
-         #f7f5f2 0,
-         #f7f5f2 1px,
-         transparent 0,
-         transparent 50%
-       );
-       background-size: 16px 16px;">
-  </div>
-
-  <div class="container relative z-10">
-
-    <!-- セクションヘッダー -->
-    <div class="mb-14">
-      <span class="font-en text-accent text-xs tracking-[0.3em] uppercase block mb-3">Why Daitou</span>
-      <h2 class="font-display text-cream text-3xl md:text-4xl">大東熔材が選ばれる理由</h2>
-      <div class="w-10 h-0.5 bg-accent mt-4"></div>
-    </div>
-
-    <!-- 3つの強み -->
-    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
-
-      <!-- 60年以上の実績 -->
-      <div class="border-l-2 border-accent pl-8">
-        <div class="font-en font-bold text-accent text-6xl md:text-7xl leading-none mb-3 tracking-tight">
-          60<span class="text-4xl">+</span>
-        </div>
-        <div class="font-display text-cream text-xl mb-5">年の実績と信頼</div>
-        <p class="font-sans text-cream/45 text-sm leading-7">
-          昭和36年（1961年）の創業以来、東大阪のものづくりの現場と共に歩んできました。長年の経験が、安心・確実なご提案につながっています。
-        </p>
-      </div>
-
-      <!-- 東大阪・地域密着 -->
-      <div class="border-l-2 border-accent/30 pl-8">
-        <div class="font-display text-accent text-4xl md:text-5xl leading-none mb-3 font-bold">
-          東大阪
-        </div>
-        <div class="font-display text-cream text-xl mb-5">地域に根ざした商社</div>
-        <p class="font-sans text-cream/45 text-sm leading-7">
-          モノづくりの街・東大阪に拠点を置き、地域の工場や事業者の皆様と長年にわたりお取引をさせていただいています。
-        </p>
-      </div>
-
-      <!-- BtoB専門 -->
-      <div class="border-l-2 border-accent/30 pl-8">
-        <div class="font-en font-bold text-accent text-6xl md:text-7xl leading-none mb-3 tracking-tight">
-          B2B
-        </div>
-        <div class="font-display text-cream text-xl mb-5">プロ向け専門商社</div>
-        <p class="font-sans text-cream/45 text-sm leading-7">
-          企業・工場のご担当者様や職人の方々に特化した専門商社です。プロの視点から、現場に合った資材を的確にご提案いたします。
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     お問い合わせ CTA
-     ============================================================ -->
-<section class="bg-accent py-14 md:py-16">
+<section class="bg-white py-20 md:py-24">
   <div class="container">
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-
-      <div>
-        <h2 class="font-display text-white text-2xl md:text-3xl mb-2">お気軽にお問い合わせください</h2>
-        <p class="font-sans text-white/65 text-sm">取扱商品・お見積もり・ご注文など、まずはお電話またはメールにて</p>
+    <div class="mb-10">
+      <p class="font-en text-accent text-xs tracking-[0.25em] uppercase mb-3">Typical Requests</p>
+      <h2 class="font-display text-primary text-3xl md:text-4xl">よくあるご相談</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border border-gray-200 p-6">
+        <p class="font-display text-primary text-xl mb-3">急ぎで補充したい</p>
+        <p class="font-sans text-body/65 text-sm leading-7">
+          「今日中に溶接ワイヤが必要」「定番品の在庫を確認したい」など、まずは電話でご相談ください。
+        </p>
       </div>
-
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-shrink-0">
-        <a href="tel:06-XXXX-XXXX"
-           class="inline-flex items-center justify-center gap-3 bg-white text-accent font-en font-bold text-xl px-7 py-4 hover:bg-cream transition-colors duration-200">
-          <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          06-XXXX-XXXX
-        </a>
-        <a href="/contact/"
-           class="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-sans font-medium text-sm px-6 py-4 hover:border-white hover:bg-white/10 transition-all duration-200">
-          メールで問い合わせる
-        </a>
+      <div class="border border-gray-200 p-6">
+        <p class="font-display text-primary text-xl mb-3">定期手配をまとめたい</p>
+        <p class="font-sans text-body/65 text-sm leading-7">
+          ガス交換や消耗品の定期補充など、購買業務を効率化できる運用をご提案します。
+        </p>
       </div>
+      <div class="border border-gray-200 p-6">
+        <p class="font-display text-primary text-xl mb-3">代替品を検討したい</p>
+        <p class="font-sans text-body/65 text-sm leading-7">
+          既存製品の納期や価格でお困りの場合、用途に応じた代替候補をご案内します。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="bg-primary py-14 md:py-16">
+  <div class="container flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <h2 class="font-display text-cream text-2xl md:text-3xl mb-2">見積依頼・在庫確認はこちら</h2>
+      <p class="font-sans text-cream/60 text-sm">型番・数量・希望納期が決まっている場合は、フォーム送信がスムーズです。</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="tel:06-XXXX-XXXX" class="inline-flex items-center justify-center bg-accent text-white font-en font-bold text-xl px-6 py-4 hover:bg-accent/85 transition-colors">
+        06-XXXX-XXXX
+      </a>
+      <a href="/contact/" class="inline-flex items-center justify-center border border-cream/35 text-cream font-sans text-sm px-6 py-4 hover:border-cream/70 hover:bg-white/5 transition-all">
+        お問い合わせフォーム
+      </a>
     </div>
   </div>
 </section>
