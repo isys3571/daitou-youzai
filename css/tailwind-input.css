@@ -37,6 +37,15 @@
     animation: fade-up 0.8s ease forwards;
   }
 
+  /* ケンバーンズ（ヒーロー画像） */
+  @keyframes ken-burns {
+    from { transform: scale(1); }
+    to   { transform: scale(1.08); }
+  }
+  .animate-ken-burns {
+    animation: ken-burns 12s ease-out forwards;
+  }
+
   /* ページ表示時のフェードイン */
   @keyframes page-in {
     from { opacity: 0; transform: translateY(6px); }
