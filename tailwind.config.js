@@ -12,9 +12,9 @@ module.exports = {
         body:    '#333333',
       },
       fontFamily: {
-        display: ['"Shippori Mincho B1"', '"Noto Serif JP"', 'serif'],
-        sans:    ['"Noto Sans JP"', 'sans-serif'],
-        en:      ['Oswald', 'sans-serif'],
+        display: ['"Shippori Mincho B1"', 'serif'],
+        sans:    ['"Zen Kaku Gothic New"', 'sans-serif'],
+        en:      ['Barlow', 'sans-serif'],
       },
       container: {
         center: true,

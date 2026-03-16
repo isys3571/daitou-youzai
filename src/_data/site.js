@@ -4,7 +4,7 @@ module.exports = {
   nameShort:'大東熔材',
   since:    '1961',
   address:  '〒577-0016 大阪府東大阪市長田西4丁目4番3号',
-  tel:      '06-XXXX-XXXX',     // TODO: 実際の番号に差し替え
-  fax:      '06-XXXX-XXXX',     // TODO
+  tel:      '06-6746-0881',
+  fax:      '06-6746-2795',
   url:      'https://example.com', // TODO: 実際のURLに差し替え
 };

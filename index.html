@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;600;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="/css/tailwind.css">
@@ -39,6 +39,12 @@
 
     <!-- メニュー -->
     <div class="flex-1 overflow-y-auto">
+      <a href="/"             class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
+        トップページ
+        <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
       <a href="/shohin/"      class="flex items-center justify-between px-6 py-4 text-cream font-sans text-sm border-b border-white/10 hover:bg-white/5 transition-colors">
         取扱商品
         <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +74,7 @@
     <!-- フッター -->
     <div class="px-6 py-5 border-t border-white/10">
       <p class="text-cream/30 text-xs font-sans">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
-      <a href="tel:06-XXXX-XXXX" class="text-cream/50 text-sm font-en mt-1 block hover:text-cream transition-colors">06-XXXX-XXXX</a>
+      <a href="tel:06-6746-0881" class="text-cream/50 text-sm font-en mt-1 block hover:text-cream transition-colors">06-6746-0881</a>
     </div>
 
   </div>
@@ -158,11 +164,11 @@
         <div class="flex flex-row-reverse gap-4">
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.18em; text-shadow:0 1px 8px rgba(0,0,0,.3);"
              class="font-display text-white text-xl leading-none">
-            現場が要るものを、
+            ものづくりを支える、
           </p>
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.18em; text-shadow:0 1px 8px rgba(0,0,0,.3);"
              class="font-display text-white text-xl leading-none mt-8">
-            要るときに届ける。
+            確かな供給力。
           </p>
         </div>
       </div>
@@ -208,11 +214,11 @@
         <div class="flex flex-row-reverse gap-6">
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.2em; text-shadow:0 1px 8px rgba(0,0,0,.25);"
              class="font-display text-white text-[1.875rem] leading-none">
-            現場が要るものを、
+            ものづくりを支える、
           </p>
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.2em; text-shadow:0 1px 8px rgba(0,0,0,.25);"
              class="font-display text-white text-[1.875rem] leading-none mt-12">
-            要るときに届ける。
+            確かな供給力。
           </p>
         </div>
       </div>
@@ -265,66 +271,44 @@
 
 <section class="bg-cream py-14 md:py-20">
   <div class="container">
-    <div class="grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-start">
 
-      
-      <div>
-        <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-4">こんなときに<br class="hidden md:inline">ご相談ください</h2>
-        <p class="font-sans text-base leading-7" style="color:#666;">
-          お急ぎの補充から定期手配の見直しまで、まずはお電話ください。
-        </p>
+    <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-10 md:mb-14">こんなときにご相談ください</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 md:gap-6">
+      <div class="relative pl-5" style="border-left:2px solid #b85c2a;">
+        <h3 class="font-display text-primary text-lg mb-3">急ぎで補充したい</h3>
+        <p class="font-sans text-sm leading-7" style="color:#666;">「今日中に溶接ワイヤが必要」「定番品の在庫を確認したい」など、まずはお電話ください。</p>
       </div>
-
-      
-      <div style="border-top:1px solid rgba(0,0,0,.1);">
-        <div class="py-6" style="border-bottom:1px solid rgba(0,0,0,.08);">
-          <h3 class="font-display text-primary text-lg mb-2">急ぎで補充したい</h3>
-          <p class="font-sans text-sm leading-7" style="color:#666;">「今日中に溶接ワイヤが必要」「定番品の在庫を確認したい」など。</p>
-        </div>
-        <div class="py-6" style="border-bottom:1px solid rgba(0,0,0,.08);">
-          <h3 class="font-display text-primary text-lg mb-2">定期手配をまとめたい</h3>
-          <p class="font-sans text-sm leading-7" style="color:#666;">ガス交換や消耗品の定期補充など、購買業務を効率化できる運用をご提案します。</p>
-        </div>
-        <div class="pt-6">
-          <h3 class="font-display text-primary text-lg mb-2">代替品を検討したい</h3>
-          <p class="font-sans text-sm leading-7" style="color:#666;">既存製品の納期や価格でお困りの場合、用途に応じた代替候補をご案内します。</p>
-        </div>
+      <div class="relative pl-5" style="border-left:2px solid rgba(0,0,0,.12);">
+        <h3 class="font-display text-primary text-lg mb-3">定期手配をまとめたい</h3>
+        <p class="font-sans text-sm leading-7" style="color:#666;">ガス交換や消耗品の定期補充など、購買業務を効率化できる運用をご提案します。</p>
       </div>
-
+      <div class="relative pl-5" style="border-left:2px solid rgba(0,0,0,.12);">
+        <h3 class="font-display text-primary text-lg mb-3">代替品を検討したい</h3>
+        <p class="font-sans text-sm leading-7" style="color:#666;">既存製品の納期や価格でお困りの場合、用途に応じた代替候補をご案内します。</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 
 <section class="bg-white py-14 md:py-20" style="border-top:1px solid rgba(0,0,0,.08);">
   <div class="container">
-    <div class="grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-start">
-
-      
-      <div>
-        <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-4">
-          在庫確認・お見積り
-        </h2>
-        <p class="font-sans text-base leading-8" style="color:#555;">
-          型番・数量・希望納期をお伝えいただければ、スムーズにご案内できます。お電話でもフォームでもお気軽にどうぞ。
-        </p>
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-4">在庫確認・お見積り</h2>
+      <p class="font-sans text-base leading-8 mb-8" style="color:#555;">
+        型番・数量・希望納期をお伝えいただければ、スムーズにご案内できます。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="tel:06-6746-0881" class="font-en text-primary leading-none hover:text-accent transition-colors"
+           style="font-size:1.5rem; letter-spacing:.04em;">06-6746-0881</a>
+        <span class="hidden sm:block w-px h-6" style="background:rgba(0,0,0,.15);"></span>
+        <a href="/contact/" class="font-sans text-sm px-5 py-2.5 border border-primary text-primary hover:bg-primary hover:text-cream transition-colors inline-block">
+          フォームで問い合わせる
+        </a>
       </div>
-
-      
-      <div class="md:pt-2" style="border-top:1px solid rgba(0,0,0,.1);">
-        <div class="py-6" style="border-bottom:1px solid rgba(0,0,0,.08);">
-          <p class="font-sans text-xs tracking-widest mb-2" style="color:#999;">お電話</p>
-          <a href="tel:06-XXXX-XXXX" class="font-en text-primary leading-none block hover:text-accent transition-colors"
-             style="font-size:1.5rem; letter-spacing:.04em;">06-XXXX-XXXX</a>
-        </div>
-        <div class="pt-6">
-          <a href="/contact/" class="font-sans text-sm px-5 py-2.5 border border-primary text-primary hover:bg-primary hover:text-cream transition-colors inline-block">
-            フォームで問い合わせる
-          </a>
-          <p class="font-sans text-xs mt-4" style="color:#999;">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
-        </div>
-      </div>
-
+      <p class="font-sans text-xs mt-6" style="color:#999;">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
     </div>
   </div>
 </section>
@@ -342,8 +326,8 @@
         <div class="font-display text-primary text-lg mb-3">大東熔材株式会社</div>
         <address class="font-sans text-sm leading-7 not-italic" style="color:#888;">
           〒577-0016 大阪府東大阪市長田西4丁目4番3号<br>
-          TEL：<a href="tel:06-XXXX-XXXX"
-                 class="hover:text-accent transition-colors" style="color:#888;">06-XXXX-XXXX</a>
+          TEL：<a href="tel:06-6746-0881"
+                 class="hover:text-accent transition-colors" style="color:#888;">06-6746-0881</a>
         </address>
       </div>
 
@@ -366,6 +350,27 @@
 </footer>
 
   </div>
+
+  <!-- トップに戻るボタン -->
+  <button
+    x-data="{ show: false }"
+    x-init="window.addEventListener('scroll', () => { show = window.scrollY > 400 })"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 translate-y-2"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 translate-y-2"
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 z-50 w-11 h-11 flex items-center justify-center bg-primary text-cream border border-white/20 shadow-md hover:bg-accent transition-colors"
+    aria-label="ページの先頭に戻る"
+    style="display:none"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
 
 </body>
 </html>
