@@ -36,4 +36,13 @@
   .animate-fade-up {
     animation: fade-up 0.8s ease forwards;
   }
+
+  /* ページ表示時のフェードイン */
+  @keyframes page-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  main {
+    animation: page-in 0.6s ease-out;
+  }
 }
