@@ -20,9 +20,9 @@ module.exports = {
         center: true,
         padding: '1.5rem',
         screens: {
-          lg:   '1120px',
-          xl:   '1120px',
-          '2xl':'1120px',
+          lg:   '1280px',
+          xl:   '1280px',
+          '2xl':'1280px',
         },
       },
     }
