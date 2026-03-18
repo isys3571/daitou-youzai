@@ -46,6 +46,20 @@
     animation: ken-burns 12s ease-out forwards;
   }
 
+  /* ヒーロー1行ずつフェードイン（ケンバーンズに合わせてゆったり） */
+  @keyframes hero-line {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-hero-line-1 {
+    animation: hero-line 1.2s cubic-bezier(.25,.1,.25,1) forwards;
+    animation-delay: 1s;
+  }
+  .animate-hero-line-2 {
+    animation: hero-line 1.2s cubic-bezier(.25,.1,.25,1) forwards;
+    animation-delay: 1.6s;
+  }
+
   /* ページ表示時のフェードイン */
   @keyframes page-in {
     from { opacity: 0; transform: translateY(6px); }

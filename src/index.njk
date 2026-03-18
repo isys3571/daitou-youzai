@@ -5,25 +5,78 @@ activePage: home
 description: 大東熔材株式会社は、大阪府東大阪市に拠点を置く溶接機材・工業用高圧ガス・工作機械の専門商社です。昭和36年（1961年）創業。東大阪のものづくりを支え続けて六十余年。
 ---
 
-{# ── ヒーローセクション ─────────────────────────── #}
-<section class="bg-white py-16 md:py-24">
-  <div class="container">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="font-sans text-sm tracking-[.25em] mb-6" style="color:#999;">
-        溶接機材 ／ 工業用高圧ガス ／ 工作機械
-      </p>
-      <h1 class="font-display text-primary text-3xl md:text-4xl leading-snug mb-6">
-        大東熔材株式会社
-      </h1>
-      <p class="font-display text-xl md:text-2xl leading-relaxed mb-8" style="color:#555;">
-        ものづくりを支える、確かな供給力。
-      </p>
-      <p class="font-sans text-base leading-8 max-w-xl mx-auto" style="color:#777;">
-        東大阪を拠点に、製造業のお客様へ溶接資材・工業用ガス・工作機械を供給しています。<br class="hidden md:inline">
-        創業から六十余年。日々の補充から設備導入まで、実務の目線でお応えします。
+{# ── ヒーロー ─────────────────────────── #}
+<section class="bg-white overflow-hidden">
+
+  {# ======= モバイル ======= #}
+  <div class="md:hidden">
+    <div class="relative h-72 sm:h-80 overflow-hidden">
+      <img src="/images/top.webp" alt="アーク溶接機を操作する工場作業員"
+           class="w-full h-full object-cover object-[40%_45%] block animate-ken-burns">
+      <div class="absolute inset-0"
+           style="background:linear-gradient(to top, rgba(10,20,35,.8) 0%, rgba(10,20,35,.35) 40%, rgba(10,20,35,.05) 100%);">
+      </div>
+      <div class="absolute inset-0 flex items-end pb-6">
+        <div class="px-6">
+          <p class="font-display text-white text-lg leading-relaxed tracking-wide animate-hero-line-1"
+             style="text-shadow:0 2px 12px rgba(0,0,0,.5); opacity:0;">
+            ものづくりを支える、
+          </p>
+          <p class="font-display text-white text-lg leading-relaxed tracking-wide animate-hero-line-2"
+             style="text-shadow:0 2px 12px rgba(0,0,0,.5); opacity:0;">
+            確かな供給力。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="px-6 py-8" style="border-top:1px solid #eee;">
+      <p class="font-sans text-xs tracking-widest mb-4" style="color:#999;">溶接機材 ／ 工業用高圧ガス ／ 工作機械</p>
+      <h1 class="font-display text-primary text-xl leading-snug mb-5">大東熔材株式会社</h1>
+      <p class="font-sans text-base leading-8" style="color:#666;">
+        東大阪を拠点に、製造業のお客様へ溶接資材・工業用ガス・工作機械を供給しています。創業から六十余年。日々の補充から設備導入まで、実務の目線でお応えします。
       </p>
     </div>
   </div>
+
+  {# ======= デスクトップ ======= #}
+  <div class="hidden md:block relative md:h-[420px] lg:h-[500px] overflow-hidden">
+
+    {# 右半分: 画像 #}
+    <div class="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
+      <img src="/images/top.webp" alt="アーク溶接機を操作する工場作業員"
+           class="w-full h-full object-cover object-[40%_45%] block animate-ken-burns">
+      <div class="absolute inset-0"
+           style="background:linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 25%);">
+      </div>
+    </div>
+
+    {# 左半分: テキスト #}
+    <div class="container h-full">
+      <div class="w-1/2 h-full flex items-center pr-12">
+        <div class="flex flex-col gap-5">
+          <p class="font-sans text-xs tracking-[.2em] flex items-center gap-3" style="color:#999;">
+            <span class="block w-8 h-px bg-accent"></span>
+            溶接機材 ／ 工業用高圧ガス ／ 工作機械
+          </p>
+          <div>
+            <h1 class="font-display text-primary text-3xl lg:text-4xl leading-snug mb-2">大東熔材株式会社</h1>
+            <p class="font-sans text-xs tracking-widest" style="color:#bbb;">昭和36年創業 ─ 大阪府東大阪市</p>
+          </div>
+          <p class="font-sans text-sm leading-8" style="color:#666;">
+            東大阪を拠点に、製造業のお客様へ溶接資材・工業用ガス・工作機械を供給しています。創業から六十余年。日々の補充から設備導入まで、実務の目線でお応えします。
+          </p>
+          <div class="flex items-center gap-4 mt-2">
+            <a href="tel:{{ site.tel }}" class="font-en text-primary text-lg tracking-wide hover:text-accent transition-colors">{{ site.tel }}</a>
+            <a href="/contact/" class="font-sans text-xs bg-accent text-white px-5 py-2 hover:bg-blue-900 transition-colors duration-200">
+              お見積り・ご相談
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 {# ── 商品カテゴリカード（3列グリッド） ─────────────────────────── #}
