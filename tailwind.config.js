@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1d4ed8',
-        accent:  '#3b82f6',
-        cream:   '#f0f4ff',
-        body:    '#374151',
+        primary: '#2c3e50',
+        accent:  '#1565c0',
+        cream:   '#ffffff',
+        body:    '#555555',
       },
       fontFamily: {
         display: ['"Shippori Mincho B1"', 'serif'],
