@@ -22,7 +22,7 @@
   <nav
   id="mobile-nav"
   class="fixed top-0 left-0 h-full w-[280px] z-50 -translate-x-full transition-transform duration-300 md:hidden"
-  style="background:#222;"
+  style="background:#1e293b;"
   :class="{ '-translate-x-full': !mobileMenuOpen, 'translate-x-0': mobileMenuOpen }"
 >
   <div class="flex flex-col h-full">
@@ -44,7 +44,7 @@
         <a href="/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-accent bg-white/5"
-           style="border-left:3px solid #b85c2a;">
+           style="border-left:3px solid #3b82f6;">
           トップページ
           <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -129,7 +129,7 @@
       <!-- ロゴ -->
       <a href="/" class="flex items-baseline gap-2 group">
         <span class="font-display text-primary text-2xl md:text-3xl font-bold leading-none group-hover:text-accent transition-colors duration-300">大東熔材</span>
-        <span class="font-sans text-body/60 text-xs tracking-wider hidden sm:inline">株式会社</span>
+        <span class="font-sans text-primary/70 text-sm md:text-lg tracking-wider">株式会社</span>
       </a>
 
       <!-- デスクトップナビ -->
@@ -182,7 +182,7 @@
       <img src="/images/top.webp" alt="アーク溶接機を操作する工場作業員"
            class="w-full h-full object-cover object-[50%_60%] block animate-ken-burns">
       <div class="absolute inset-y-0 left-0 flex items-center pl-5 pr-10"
-           style="background:linear-gradient(90deg, rgba(30,45,74,.7) 0%, rgba(30,45,74,.35) 50%, transparent 100%);">
+           style="background:linear-gradient(90deg, rgba(29,78,216,.7) 0%, rgba(29,78,216,.35) 50%, transparent 100%);">
         <div class="flex flex-row-reverse gap-4 animate-fade-up" style="animation-delay:.3s; opacity:0;">
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.18em; text-shadow:0 1px 8px rgba(0,0,0,.3);"
              class="font-display text-white text-xl leading-none">
@@ -198,10 +198,9 @@
 
     
     <div class="px-6 py-8" style="border-top:1px solid rgba(0,0,0,.08);">
-      <p class="font-sans text-xs tracking-widest mb-4" style="color:#706a63;">溶接機材 ／ 工業用高圧ガス ／ 工作機械</p>
-      <h1 class="font-display text-primary text-xl leading-snug mb-1">大東熔材株式会社</h1>
-      <p class="font-en text-xs tracking-widest mb-5" style="color:#918b85; font-size:.65rem;">DAITOU YOUZAI CO., LTD.</p>
-      <p class="font-sans text-base leading-8" style="color:#56524e;">
+      <p class="font-sans text-xs tracking-widest mb-4" style="color:#64748b;">溶接機材 ／ 工業用高圧ガス ／ 工作機械</p>
+      <h1 class="font-display text-primary text-xl leading-snug mb-5">大東熔材株式会社</h1>
+      <p class="font-sans text-base leading-8" style="color:#475569;">
         東大阪を拠点に、製造業のお客様へ溶接資材・工業用ガス・工作機械を供給しています。創業から六十余年。日々の補充から設備導入まで、実務の目線でお応えします。
       </p>
     </div>
@@ -216,7 +215,7 @@
       <img src="/images/top.webp" alt="アーク溶接機を操作する工場作業員"
            class="w-full h-full object-cover object-[50%_60%] block animate-ken-burns">
       <div class="absolute inset-y-0 left-0 flex items-center pl-8 pr-14"
-           style="background:linear-gradient(90deg, rgba(30,45,74,.7) 0%, rgba(30,45,74,.35) 55%, transparent 100%);">
+           style="background:linear-gradient(90deg, rgba(29,78,216,.7) 0%, rgba(29,78,216,.35) 55%, transparent 100%);">
         <div class="flex flex-row-reverse gap-6 animate-fade-up" style="animation-delay:.3s; opacity:0;">
           <p style="writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.2em; text-shadow:0 1px 8px rgba(0,0,0,.25);"
              class="font-display text-white text-[1.875rem] leading-none">
@@ -234,14 +233,13 @@
     <div class="container h-full">
       <div class="w-1/2 h-full flex items-center pr-12">
         <div class="flex flex-col gap-6">
-          <p class="font-sans text-xs tracking-widest" style="color:#706a63;">
+          <p class="font-sans text-xs tracking-widest" style="color:#64748b;">
             溶接機材 ／ 工業用高圧ガス ／ 工作機械
           </p>
           <div>
-            <h1 class="font-display text-primary text-2xl leading-snug mb-1">大東熔材株式会社</h1>
-            <p class="font-en text-xs tracking-widest" style="color:#918b85; font-size:.65rem;">DAITOU YOUZAI CO., LTD.</p>
+            <h1 class="font-display text-primary text-2xl leading-snug">大東熔材株式会社</h1>
           </div>
-          <p class="font-sans text-base leading-8" style="color:#56524e;">
+          <p class="font-sans text-base leading-8" style="color:#475569;">
             東大阪を拠点に、製造業のお客様へ溶接資材・工業用ガス・工作機械を供給しています。創業から六十余年。日々の補充から設備導入まで、実務の目線でお応えします。
           </p>
         </div>
@@ -255,8 +253,8 @@
 
 <div style="border-top:1px solid rgba(0,0,0,.08); border-bottom:1px solid rgba(0,0,0,.08);">
   <div class="container py-5">
-    <p class="font-sans text-xs tracking-widest text-center" style="color:#706a63;">
-      昭和36年創業 &ensp;|&ensp; 大阪府東大阪市 &ensp;|&ensp; 大阪高圧ガス熔材協同組合会員
+    <p class="font-sans text-xs tracking-widest text-center" style="color:#64748b;">
+      昭和36年創業 &ensp;|&ensp; 大阪府東大阪市
     </p>
   </div>
 </div>
@@ -267,7 +265,7 @@
     <div class="grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-start">
       <div>
         <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-4">取扱品目</h2>
-        <p class="font-sans text-base leading-7" style="color:#56524e;">
+        <p class="font-sans text-base leading-7" style="color:#475569;">
           溶接に関わる機材・消耗品から、工場で使う工作機械・工具まで。定番品の在庫はお電話でご確認いただけます。
         </p>
       </div>
@@ -277,15 +275,15 @@
             <span class="inline-block w-1.5 h-5 bg-accent rounded-sm shrink-0 translate-y-[1px]"></span>
             <h3 class="font-display text-primary text-xl">溶接機材</h3>
           </div>
-          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#56524e;">溶接機・切断機、溶接棒・溶接ワイヤ、トーチ・ノズル・チップ等の消耗品、安全保護具</p>
+          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#475569;">溶接機・切断機、溶接棒・溶接ワイヤ、トーチ・ノズル・チップ等の消耗品、安全保護具</p>
         </div>
         <div class="py-6" style="border-bottom:1px solid rgba(0,0,0,.08);">
           <h3 class="font-display text-primary text-lg mb-2 pl-[18px]">工業用高圧ガス</h3>
-          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#56524e;">酸素、アセチレン、炭酸ガス、その他工業用ガス各種</p>
+          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#475569;">酸素、アセチレン、炭酸ガス、その他工業用ガス各種</p>
         </div>
         <div class="pt-6">
           <h3 class="font-display text-primary text-lg mb-2 pl-[18px]">工作機械・工具</h3>
-          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#56524e;">電動工具、切断・研磨工具、作業工具・治具、工場向け機械器具</p>
+          <p class="font-sans text-base leading-7 pl-[18px]" style="color:#475569;">電動工具、切断・研磨工具、作業工具・治具、工場向け機械器具</p>
         </div>
       </div>
     </div>
@@ -298,18 +296,14 @@
 
     <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-10 md:mb-14">こんなときにご相談ください</h2>
 
-    <div class="grid md:grid-cols-3 gap-8 md:gap-6">
-      <div class="relative pl-5" style="border-left:2px solid #b85c2a;">
-        <h3 class="font-display text-primary text-lg mb-3">急ぎで補充したい</h3>
-        <p class="font-sans text-sm leading-7" style="color:#56524e;">「今日中に溶接ワイヤが必要」「定番品の在庫を確認したい」など、まずはお電話ください。</p>
-      </div>
-      <div class="relative pl-5" style="border-left:2px solid rgba(0,0,0,.12);">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-6">
+      <div class="relative pl-5" style="border-left:2px solid #3b82f6;">
         <h3 class="font-display text-primary text-lg mb-3">定期手配をまとめたい</h3>
-        <p class="font-sans text-sm leading-7" style="color:#56524e;">ガス交換や消耗品の定期補充など、購買業務を効率化できる運用をご提案します。</p>
+        <p class="font-sans text-sm leading-7" style="color:#475569;">ガス交換や消耗品の定期補充など、購買業務を効率化できる運用をご提案します。</p>
       </div>
-      <div class="relative pl-5" style="border-left:2px solid rgba(0,0,0,.12);">
+      <div class="relative pl-5" style="border-left:2px solid rgba(29,78,216,.2);">
         <h3 class="font-display text-primary text-lg mb-3">代替品を検討したい</h3>
-        <p class="font-sans text-sm leading-7" style="color:#56524e;">既存製品の納期や価格でお困りの場合、用途に応じた代替候補をご案内します。</p>
+        <p class="font-sans text-sm leading-7" style="color:#475569;">既存製品の納期や価格でお困りの場合、用途に応じた代替候補をご案内します。</p>
       </div>
     </div>
 
@@ -321,7 +315,7 @@
   <div class="container">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="font-display text-primary text-2xl md:text-3xl leading-snug mb-4">在庫確認・お見積り</h2>
-      <p class="font-sans text-base leading-8 mb-8" style="color:#56524e;">
+      <p class="font-sans text-base leading-8 mb-8" style="color:#475569;">
         型番・数量・希望納期をお伝えいただければ、スムーズにご案内できます。
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -332,42 +326,42 @@
           フォームで問い合わせる
         </a>
       </div>
-      <p class="font-sans text-xs mt-6" style="color:#918b85;">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
+      <p class="font-sans text-xs mt-6" style="color:#94a3b8;">〒577-0016 大阪府東大阪市長田西4丁目4番3号</p>
     </div>
   </div>
 </section>
 
     </main>
 
-    <footer style="background:#eeebe6; border-top:1px solid rgba(0,0,0,.07);">
+    <footer style="background:#e0e7ff; border-top:1px solid rgba(29,78,216,.1);">
   <div class="container">
 
     <div class="py-10 md:py-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12"
-         style="border-bottom:1px solid rgba(0,0,0,.07);">
+         style="border-bottom:1px solid rgba(29,78,216,.1);">
 
       <!-- 会社情報 -->
       <div>
         <div class="font-display text-primary text-lg mb-3">大東熔材株式会社</div>
-        <address class="font-sans text-sm leading-7 not-italic" style="color:#706a63;">
+        <address class="font-sans text-sm leading-7 not-italic" style="color:#64748b;">
           〒577-0016 大阪府東大阪市長田西4丁目4番3号<br>
           TEL：<a href="tel:06-6746-0881"
-                 class="hover:text-accent transition-colors" style="color:#706a63;">06-6746-0881</a>
+                 class="hover:text-accent transition-colors" style="color:#64748b;">06-6746-0881</a>
         </address>
       </div>
 
       <!-- ナビ -->
       <nav class="flex flex-col gap-2.5">
-        <a href="/"             class="font-sans text-sm transition-colors hover:text-accent" style="color:#706a63;">トップページ</a>
-        <a href="/shohin/"      class="font-sans text-sm transition-colors hover:text-accent" style="color:#706a63;">取扱商品</a>
-        <a href="/kaisha-joho/" class="font-sans text-sm transition-colors hover:text-accent" style="color:#706a63;">会社情報</a>
-        <a href="/access/"      class="font-sans text-sm transition-colors hover:text-accent" style="color:#706a63;">アクセス</a>
-        <a href="/contact/"     class="font-sans text-sm transition-colors hover:text-accent" style="color:#706a63;">お問い合わせ</a>
+        <a href="/"             class="font-sans text-sm transition-colors hover:text-accent" style="color:#64748b;">トップページ</a>
+        <a href="/shohin/"      class="font-sans text-sm transition-colors hover:text-accent" style="color:#64748b;">取扱商品</a>
+        <a href="/kaisha-joho/" class="font-sans text-sm transition-colors hover:text-accent" style="color:#64748b;">会社情報</a>
+        <a href="/access/"      class="font-sans text-sm transition-colors hover:text-accent" style="color:#64748b;">アクセス</a>
+        <a href="/contact/"     class="font-sans text-sm transition-colors hover:text-accent" style="color:#64748b;">お問い合わせ</a>
       </nav>
 
     </div>
 
     <div class="py-5">
-      <p class="font-sans text-xs" style="color:#918b85;">&copy; 大東熔材株式会社. All rights reserved.</p>
+      <p class="font-sans text-xs" style="color:#94a3b8;">&copy; 大東熔材株式会社. All rights reserved.</p>
     </div>
 
   </div>
