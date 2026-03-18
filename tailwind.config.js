@@ -10,6 +10,7 @@ module.exports = {
         accent:  '#1565c0',
         cream:   '#ffffff',
         body:    '#555555',
+        dark:    '#1a2633',
       },
       fontFamily: {
         display: ['"Shippori Mincho B1"', 'serif'],
