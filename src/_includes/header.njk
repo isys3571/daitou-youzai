@@ -1,30 +1,30 @@
-<header class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+<header class="sticky top-0 z-40 bg-white border-b border-gray-100">
   <div class="container">
     <div class="flex items-center justify-between h-16 md:h-20">
 
       <!-- ロゴ -->
-      <a href="/" class="flex items-baseline gap-2 group">
-        <span class="font-display text-primary text-2xl md:text-3xl font-bold leading-none group-hover:text-accent transition-colors duration-300">大東熔材</span>
-        <span class="font-sans text-primary/70 text-sm md:text-lg tracking-wider">株式会社</span>
+      <a href="/" class="flex items-baseline gap-1.5 group">
+        <span class="font-display text-primary text-2xl md:text-3xl font-bold leading-none">大東熔材</span>
+        <span class="font-sans text-primary/60 text-sm md:text-lg tracking-wider">株式会社</span>
       </a>
 
       <!-- デスクトップナビ -->
-      <nav class="hidden md:flex items-center gap-8">
+      <nav class="hidden md:flex items-center gap-10">
         <a href="/shohin/"
-           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 {% if activePage == 'shohin' %}text-accent font-medium{% endif %}">
+           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'shohin' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
           取扱商品
         </a>
         <a href="/kaisha-joho/"
-           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 {% if activePage == 'kaisha-joho' %}text-accent font-medium{% endif %}">
+           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'kaisha-joho' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
           会社情報
         </a>
         <a href="/access/"
-           class="font-sans text-sm text-body/70 hover:text-accent transition-colors duration-200 {% if activePage == 'access' %}text-accent font-medium{% endif %}">
+           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'access' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
           アクセス
         </a>
         <a href="/contact/"
-           class="font-sans text-sm border-2 border-accent text-accent px-5 py-2 hover:bg-accent hover:text-white transition-colors duration-200">
-          見積・相談する
+           class="font-sans text-sm bg-accent text-white px-6 py-2.5 hover:bg-sky-600 transition-colors duration-200">
+          お問い合わせ
         </a>
       </nav>
 
