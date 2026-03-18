@@ -12,7 +12,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #0ea5e9;
+    outline: 2px solid #1565c0;
     outline-offset: 2px;
   }
 }
@@ -35,6 +35,20 @@
   }
   .animate-fade-up {
     animation: fade-up 0.8s ease forwards;
+  }
+
+  /* ヒーロー1行ずつフェードイン（ケンバーンズに合わせてゆったり） */
+  @keyframes hero-line {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-hero-line-1 {
+    animation: hero-line 1.2s cubic-bezier(.25,.1,.25,1) forwards;
+    animation-delay: 1s;
+  }
+  .animate-hero-line-2 {
+    animation: hero-line 1.2s cubic-bezier(.25,.1,.25,1) forwards;
+    animation-delay: 1.6s;
   }
 
   /* ケンバーンズ（ヒーロー画像） */

@@ -9,21 +9,23 @@
       </a>
 
       <!-- デスクトップナビ -->
-      <nav class="hidden md:flex items-center gap-10">
-        <a href="/shohin/"
-           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'shohin' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
-          取扱商品
-        </a>
+      <nav class="hidden md:flex items-center">
         <a href="/kaisha-joho/"
-           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'kaisha-joho' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
+           class="font-sans text-sm tracking-wide px-6 py-2 transition-colors duration-200 {% if activePage == 'kaisha-joho' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
           会社情報
         </a>
+        <span class="w-px h-4" style="background:#ddd;"></span>
+        <a href="/shohin/"
+           class="font-sans text-sm tracking-wide px-6 py-2 transition-colors duration-200 {% if activePage == 'shohin' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
+          取扱商品
+        </a>
+        <span class="w-px h-4" style="background:#ddd;"></span>
         <a href="/access/"
-           class="font-sans text-sm tracking-wide transition-colors duration-200 {% if activePage == 'access' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
+           class="font-sans text-sm tracking-wide px-6 py-2 transition-colors duration-200 {% if activePage == 'access' %}text-primary font-medium{% else %}text-body hover:text-primary{% endif %}">
           アクセス
         </a>
         <a href="/contact/"
-           class="font-sans text-sm bg-accent text-white px-6 py-2.5 hover:bg-sky-600 transition-colors duration-200">
+           class="font-sans text-xs bg-primary text-white px-5 py-2 hover:bg-accent transition-colors duration-200 ml-3">
           お問い合わせ
         </a>
       </nav>
