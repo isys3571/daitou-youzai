@@ -22,7 +22,7 @@
   <nav
   id="mobile-nav"
   class="fixed top-0 left-0 h-full w-[280px] z-50 -translate-x-full transition-transform duration-300 md:hidden"
-  style="background:#1a2633;"
+  class="bg-dark"
   :class="{ '-translate-x-full': !mobileMenuOpen, 'translate-x-0': mobileMenuOpen }"
 >
   <div class="flex flex-col h-full">
@@ -44,7 +44,7 @@
         <a href="/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-cream hover:bg-white/5"
-           style="">
+           >
           トップページ
           <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -54,7 +54,7 @@
         <a href="/shohin/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-cream hover:bg-white/5"
-           style="">
+           >
           取扱商品
           <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -64,7 +64,7 @@
         <a href="/kaisha-joho/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-accent bg-white/5"
-           style="border-left:3px solid #1565c0;">
+           style="border-left:3px solid">
           会社情報
           <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -74,7 +74,7 @@
         <a href="/access/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-cream hover:bg-white/5"
-           style="">
+           >
           アクセス
           <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -84,7 +84,7 @@
         <a href="/contact/"
            class="flex items-center justify-between px-6 py-4 font-sans text-sm border-b border-white/10 transition-colors
                   text-cream hover:bg-white/5"
-           style="">
+           >
           お問い合わせ
           <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -149,7 +149,7 @@
           アクセス
         </a>
         <a href="/contact/"
-           class="font-sans text-xs bg-primary text-white px-5 py-2 hover:bg-accent transition-colors duration-200 ml-3">
+           class="font-sans text-xs bg-accent text-white px-5 py-2 hover:bg-primary transition-colors duration-200 ml-3">
           お問い合わせ
         </a>
       </nav>
@@ -251,7 +251,7 @@
 
     </main>
 
-    <footer style="background:#1a2633;">
+    <footer class="bg-dark">
   <div class="container">
 
     <div class="py-10 md:py-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12"
