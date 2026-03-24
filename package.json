@@ -5,7 +5,7 @@
     "build:css": "npx tailwindcss -i ./src/css/tailwind-input.css -o ./src/css/tailwind.css --minify",
     "watch:css": "npx tailwindcss -i ./src/css/tailwind-input.css -o ./src/css/tailwind.css --watch",
     "dev": "npm run build:css && eleventy --serve",
-    "build": "npm run build:css && eleventy && find _site -name '*.njk' -type f -exec sh -c 'mv \"$1\" \"${1%.njk}.html\"' _ {} \\; && cp -r _site/* . && rm -rf _site",
+    "build": "npm run build:css && eleventy && find _site -name '*.njk' -type f -exec sh -c 'mv \"$1\" \"${1%.njk}.html\"' _ {} \\; && cp -r _site/* . && rm -rf _site && eleventy",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
