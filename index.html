@@ -173,8 +173,9 @@
     <main>
       
 
-<section class="relative h-[50vh] md:h-[60vh] lg:h-[65vh] overflow-hidden">
-  <img src="/images/top.webp" alt="アーク溶接機を操作する工場作業員"
+<section class="relative h-[50vh] md:h-[60vh] lg:h-[65vh] overflow-hidden"
+  x-data="{ heroSrc: new URLSearchParams(location.search).get('hero') === 'B' ? '/images/B.webp' : new URLSearchParams(location.search).get('hero') === 'A2' ? '/images/A-2.webp' : '/images/A.webp' }">
+  <img :src="heroSrc" alt="アーク溶接機を操作する工場作業員"
        class="w-full h-full object-cover object-[40%_45%] block animate-ken-burns">
   <div class="absolute inset-0"
        style="background:linear-gradient(to top, rgba(10,20,35,.8) 0%, rgba(10,20,35,.35) 40%, rgba(10,20,35,.05) 100%);">
@@ -218,7 +219,7 @@
       
       <div class="bg-white overflow-hidden flex flex-col group" style="border:1px solid #eee;">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/images/card-welding.webp" alt="溶接機材"
+          <img src="/images/card-welding2.webp" alt="溶接機材"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-8 flex flex-col flex-1 text-center">
@@ -236,7 +237,7 @@
       
       <div class="bg-white overflow-hidden flex flex-col group" style="border:1px solid #eee;">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/images/card-gas.webp" alt="工業用高圧ガス"
+          <img src="/images/card-gas2.webp" alt="工業用高圧ガス"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-8 flex flex-col flex-1 text-center">
@@ -254,7 +255,7 @@
       
       <div class="bg-white overflow-hidden flex flex-col group" style="border:1px solid #eee;">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/images/card-tools.webp" alt="工作機械・工具"
+          <img src="/images/card-tools2.webp" alt="工作機械・工具"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-8 flex flex-col flex-1 text-center">
