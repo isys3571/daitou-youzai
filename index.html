@@ -174,7 +174,7 @@
       
 
 <section class="relative h-[50vh] md:h-[60vh] lg:h-[65vh] overflow-hidden"
-  x-data="{ heroSrc: new URLSearchParams(location.search).get('hero') === 'B' ? '/images/B.webp' : new URLSearchParams(location.search).get('hero') === 'A2' ? '/images/A-2.webp' : '/images/A.webp' }">
+  x-data="{ heroSrc: '/images/A-2.webp' }">
   <img :src="heroSrc" alt="アーク溶接機を操作する工場作業員"
        class="w-full h-full object-cover object-[40%_45%] block animate-ken-burns">
   <div class="absolute inset-0"
