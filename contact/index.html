@@ -171,9 +171,118 @@
 
 
     <main>
-      <div class="container py-24 text-center">
-  <h1 class="font-display text-primary text-4xl mb-4">お問い合わせ</h1>
-  <p class="font-sans text-body/50">（準備中）</p>
+      
+<div x-data="{ submitted: false, loading: false }">
+
+  <!-- ページヘッダー -->
+  <section class="bg-primary py-16 lg:py-24">
+    <div class="container">
+      <h1 class="font-display text-white text-2xl lg:text-4xl text-center">お問い合わせ</h1>
+      <div class="w-12 mx-auto mt-6" style="border-bottom:2px solid #1976d2;"></div>
+    </div>
+  </section>
+
+  <!-- フォームセクション -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container">
+      <div class="max-w-[640px] mx-auto">
+
+        <!-- フォーム -->
+        <div x-show="!submitted">
+
+          <div class="border-l-2 border-accent p-6 mb-10" style="background:rgba(44,62,80,0.03);">
+            <p class="font-sans text-sm text-body leading-loose">下記フォームに必要事項をご入力の上、送信ボタンをクリックしてください。<br>
+            <span class="text-primary font-bold">*</span> は必須項目です。</p>
+          </div>
+
+          <form
+            @submit.prevent="loading = true; setTimeout(() => { submitted = true; loading = false; $nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }, 1000)"
+            class="space-y-8"
+          >
+
+            <div>
+              <label class="block font-sans text-sm font-medium text-primary mb-2">お問い合わせ種別 <span class="text-accent font-bold">*</span></label>
+              <select name="category" required
+                class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+                <option value="">選択してください</option>
+                <option value="溶接機材について">溶接機材について</option>
+                <option value="工業用高圧ガスについて">工業用高圧ガスについて</option>
+                <option value="工作機械・工具について">工作機械・工具について</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <label class="block font-sans text-sm font-medium text-primary mb-2">会社名</label>
+                <input name="company" type="text"
+                  class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+              </div>
+
+              <div>
+                <label class="block font-sans text-sm font-medium text-primary mb-2">ご担当者名 <span class="text-accent font-bold">*</span></label>
+                <input name="name" type="text" required
+                  class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+              </div>
+
+              <div>
+                <label class="block font-sans text-sm font-medium text-primary mb-2">メールアドレス <span class="text-accent font-bold">*</span></label>
+                <input name="email" type="email" required
+                  class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+              </div>
+
+              <div>
+                <label class="block font-sans text-sm font-medium text-primary mb-2">電話番号</label>
+                <input name="tel" type="tel"
+                  class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-sans text-sm font-medium text-primary mb-2">お問い合わせ内容 <span class="text-accent font-bold">*</span></label>
+              <textarea name="message" rows="6" required
+                class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"></textarea>
+            </div>
+
+            <div class="text-center pt-4">
+              <button
+                type="submit"
+                :disabled="loading"
+                :class="{ 'opacity-60 cursor-wait': loading }"
+                class="w-full sm:w-1/2 bg-primary text-white font-sans text-sm py-4 px-8 tracking-widest hover:opacity-80 transition-opacity"
+              >
+                <span x-show="!loading">送信する</span>
+                <span x-show="loading" style="display:none;">送信中...</span>
+              </button>
+            </div>
+
+            <div class="text-center">
+              <p class="font-sans text-xs text-body/60">※送信前に入力内容をご確認ください。</p>
+              <p class="font-sans text-xs text-body/60">※お問い合わせ内容により回答にお時間をいただく場合がございます。</p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- 完了画面 -->
+        <div x-show="submitted" style="display:none;" class="py-16 text-center">
+          <div class="border border-gray-200 p-8 lg:p-12 mb-8 inline-block text-left max-w-md w-full" style="border-left:2px solid #1976d2;">
+            <svg class="h-12 w-12 text-primary mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <h2 class="font-display text-xl lg:text-2xl text-primary mb-4 text-center">送信完了</h2>
+            <p class="font-sans text-sm text-body leading-loose text-center">お問い合わせありがとうございました。<br>内容を確認の上、担当者よりご連絡いたします。</p>
+          </div>
+          <p class="font-sans text-sm text-body/70 leading-loose mb-8">お問い合わせ内容によっては、回答までにお時間をいただく場合がございます。<br>何卒ご了承くださいますようお願い申し上げます。</p>
+          <a href="/" class="inline-flex items-center justify-center bg-primary hover:opacity-80 text-white font-sans text-sm py-4 px-8 tracking-widest transition-opacity min-w-[200px]">
+            ホームに戻る
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </div>
 
     </main>
