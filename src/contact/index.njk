@@ -10,7 +10,7 @@ activePage: contact
   <section class="bg-primary py-16 lg:py-24">
     <div class="container">
       <h1 class="font-display text-white text-2xl lg:text-4xl text-center">お問い合わせ</h1>
-      <div class="w-12 mx-auto mt-6" style="border-bottom:2px solid #1976d2;"></div>
+      <div class="w-12 mx-auto mt-6 border-b-2 border-accent"></div>
     </div>
   </section>
 
@@ -22,7 +22,7 @@ activePage: contact
         <!-- フォーム -->
         <div x-show="!submitted">
 
-          <div class="border-l-2 border-accent p-6 mb-10" style="background:rgba(44,62,80,0.03);">
+          <div class="border-l-2 border-primary p-6 mb-10" style="background:rgba(44,62,80,0.03);">
             <p class="font-sans text-sm text-body leading-loose">下記フォームに必要事項をご入力の上、送信ボタンをクリックしてください。<br>
             <span class="text-primary font-bold">*</span> は必須項目です。</p>
           </div>
@@ -89,8 +89,8 @@ activePage: contact
             </div>
 
             <div class="text-center">
-              <p class="font-sans text-xs text-body/60">※送信前に入力内容をご確認ください。</p>
-              <p class="font-sans text-xs text-body/60">※お問い合わせ内容により回答にお時間をいただく場合がございます。</p>
+              <p class="font-sans text-xs text-muted">※送信前に入力内容をご確認ください。</p>
+              <p class="font-sans text-xs text-muted">※お問い合わせ内容により回答にお時間をいただく場合がございます。</p>
             </div>
 
           </form>
@@ -98,14 +98,14 @@ activePage: contact
 
         <!-- 完了画面 -->
         <div x-show="submitted" style="display:none;" class="py-16 text-center">
-          <div class="border border-gray-200 p-8 lg:p-12 mb-8 inline-block text-left max-w-md w-full" style="border-left:2px solid #1976d2;">
+          <div class="border border-gray-200 border-l-2 border-l-primary p-8 lg:p-12 mb-8 inline-block text-left max-w-md w-full">
             <svg class="h-12 w-12 text-primary mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
             </svg>
             <h2 class="font-display text-xl lg:text-2xl text-primary mb-4 text-center">送信完了</h2>
             <p class="font-sans text-sm text-body leading-loose text-center">お問い合わせありがとうございました。<br>内容を確認の上、担当者よりご連絡いたします。</p>
           </div>
-          <p class="font-sans text-sm text-body/70 leading-loose mb-8">お問い合わせ内容によっては、回答までにお時間をいただく場合がございます。<br>何卒ご了承くださいますようお願い申し上げます。</p>
+          <p class="font-sans text-sm text-muted leading-loose mb-8">お問い合わせ内容によっては、回答までにお時間をいただく場合がございます。<br>何卒ご了承くださいますようお願い申し上げます。</p>
           <a href="/" class="inline-flex items-center justify-center bg-primary hover:opacity-80 text-white font-sans text-sm py-4 px-8 tracking-widest transition-opacity min-w-[200px]">
             ホームに戻る
           </a>

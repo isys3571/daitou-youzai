@@ -9,8 +9,11 @@ module.exports = {
         primary: '#2c3e50',
         accent:  '#1976d2',
         cream:   '#ffffff',
-        body:    '#555555',
         dark:    '#1a2633',
+        strong:  '#333333',
+        body:    '#555555',
+        muted:   '#888888',
+        faint:   '#b3b3b3',
       },
       fontFamily: {
         display: ['"Shippori Mincho B1"', 'serif'],

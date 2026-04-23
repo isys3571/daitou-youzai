@@ -3,4 +3,7 @@ _site/
 src/css/tailwind.css
 .DS_Store
 .claude/
+.codex/
+.agents/
+AGENTS.md
 eleventy.log
