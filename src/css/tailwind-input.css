@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-body bg-cream;
+    @apply font-sans text-body bg-white;
   }
 
   h1, h2, h3 {
