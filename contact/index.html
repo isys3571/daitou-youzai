@@ -172,7 +172,12 @@
 
     <main>
       
-<div x-data="{ submitted: false, loading: false }">
+
+
+<div
+  x-data="contactForm()"
+  x-init="init()"
+>
 
   <!-- ページヘッダー -->
   <section class="bg-primary py-16 lg:py-24">
@@ -195,10 +200,7 @@
             <span class="text-primary font-bold">*</span> は必須項目です。</p>
           </div>
 
-          <form
-            @submit.prevent="loading = true; setTimeout(() => { submitted = true; loading = false; $nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }, 1000)"
-            class="space-y-8"
-          >
+          <form @submit.prevent="submit($event)" class="space-y-8">
 
             <div>
               <label class="block font-sans text-sm font-medium text-primary mb-2">お問い合わせ種別 <span class="text-accent font-bold">*</span></label>
@@ -244,6 +246,10 @@
                 class="w-full border border-gray-200 px-4 py-3 font-sans text-sm text-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"></textarea>
             </div>
 
+            <div x-show="errorMessage" x-cloak class="border-l-2 border-accent p-4 bg-red-50">
+              <p class="font-sans text-sm text-accent" x-text="errorMessage"></p>
+            </div>
+
             <div class="text-center pt-4">
               <button
                 type="submit"
@@ -259,6 +265,7 @@
             <div class="text-center">
               <p class="font-sans text-xs text-muted">※送信前に入力内容をご確認ください。</p>
               <p class="font-sans text-xs text-muted">※お問い合わせ内容により回答にお時間をいただく場合がございます。</p>
+              <p class="font-sans text-xs text-muted mt-3">このサイトはreCAPTCHAによって保護されており、Googleの<a href="https://policies.google.com/privacy" class="underline" target="_blank" rel="noopener">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" class="underline" target="_blank" rel="noopener">利用規約</a>が適用されます。</p>
             </div>
 
           </form>
@@ -284,6 +291,67 @@
   </section>
 
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LdE6d8sAAAAAOXFP1WnhQWScsrL0g__EZm2zDFt"></script>
+<script>
+  function contactForm() {
+    return {
+      submitted: false,
+      loading: false,
+      errorMessage: '',
+      siteKey: '6LdE6d8sAAAAAOXFP1WnhQWScsrL0g__EZm2zDFt',
+      init() {},
+      async submit(e) {
+        this.errorMessage = '';
+        const form = e.target;
+        const messageField = form.querySelector('[name="message"]');
+
+        if (messageField && /https?:\/\/|:\/\//i.test(messageField.value)) {
+          this.errorMessage = '内容欄にURLを含めることはできません。参考資料がございましたら、折り返しのメールにてお送りください。';
+          messageField.focus();
+          return;
+        }
+
+        this.loading = true;
+
+        try {
+          const token = await new Promise((resolve, reject) => {
+            if (typeof grecaptcha === 'undefined') {
+              reject(new Error('reCAPTCHAの読み込みに失敗しました'));
+              return;
+            }
+            grecaptcha.ready(() => {
+              grecaptcha.execute(this.siteKey, { action: 'contact_submit' })
+                .then(resolve)
+                .catch(reject);
+            });
+          });
+
+          const formData = new FormData(form);
+          formData.append('recaptcha_token', token);
+
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData,
+          });
+
+          const result = await res.json().catch(() => ({}));
+
+          if (res.ok && result.success) {
+            this.submitted = true;
+            this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+          } else {
+            this.errorMessage = result.error || '送信に失敗しました。時間をおいて再度お試しください。';
+          }
+        } catch (err) {
+          this.errorMessage = '通信エラーが発生しました。ネットワークをご確認の上、再度お試しください。';
+        } finally {
+          this.loading = false;
+        }
+      },
+    };
+  }
+</script>
 
     </main>
 
