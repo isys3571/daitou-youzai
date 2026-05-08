@@ -3,8 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{{ description or '大東熔材株式会社は、大阪府東大阪市に拠点を置く溶接機材・工業用高圧ガス・工作機械の専門商社です。昭和30年（1955年）創業。' }}">
+  {% set pageTitle = (title + ' | ' + site.name) if title else site.name %}
+  {% set pageDescription = description or '大東熔材株式会社は、大阪府東大阪市に拠点を置く溶接機材・工業用高圧ガス・工作機械の専門商社です。昭和30年（1955年）創業。' %}
+  {% set canonicalUrl = site.url + page.url %}
+  {% set ogImage = site.url + '/images/main.webp' %}
+
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ canonicalUrl }}">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  <meta property="og:image" content="{{ ogImage }}">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ ogImage }}">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "alternateName": "{{ site.nameEn }}",
+    "url": "{{ site.url }}",
+    "image": "{{ ogImage }}",
+    "telephone": "{{ site.tel }}",
+    "faxNumber": "{{ site.fax }}",
+    "foundingDate": "{{ site.since }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "長田西4丁目4番3号",
+      "addressLocality": "東大阪市",
+      "addressRegion": "大阪府",
+      "postalCode": "577-0016",
+      "addressCountry": "JP"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ site.tel }}",
+      "contactType": "customer support",
+      "areaServed": "JP",
+      "availableLanguage": "Japanese"
+    }
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

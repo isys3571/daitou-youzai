@@ -6,5 +6,5 @@ module.exports = {
   address:  '〒577-0016 大阪府東大阪市長田西4丁目4番3号',
   tel:      '06-6746-0881',
   fax:      '06-6746-2795',
-  url:      'https://example.com', // TODO: 実際のURLに差し替え
+  url:      'https://daitouyouzai.com',
 };
