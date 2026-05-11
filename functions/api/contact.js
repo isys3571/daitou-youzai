@@ -96,7 +96,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: env.MAIL_FROM,
-        to: env.MAIL_TO,
+        to: env.MAIL_TO.split(',').map(s => s.trim()).filter(Boolean),
         reply_to: data.email,
         subject,
         text,
