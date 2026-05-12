@@ -7,3 +7,4 @@ src/css/tailwind.css
 .agents/
 AGENTS.md
 eleventy.log
+scripts/.cache/
