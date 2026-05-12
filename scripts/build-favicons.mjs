@@ -16,9 +16,18 @@ const FONT_CACHE = join(CACHE_DIR, "NotoSerifJP-Bold.ttf");
 const FONT_URL =
   "https://cdn.jsdelivr.net/npm/@expo-google-fonts/noto-serif-jp@0.2.3/NotoSerifJP_700Bold.ttf";
 
-const BG = "#0f2c4a"; // ネイビー
-const FG = "#ffffff"; // 白
+const BG = "#ffffff"; // 背景: 白
+const FG = "#0f2c4a"; // 文字・枠: ネイビー
+const SLIT = BG; // スリット色（背景と同色で文字を切り抜く）
 const CHAR = "大";
+
+// バッジ構成（viewBox 64基準）
+const FRAME_INSET = 6;     // 枠の内側余白（端からの距離）
+const FRAME_STROKE = 3;    // 枠線の太さ
+const KANJI_PAD = 12;      // 漢字の周囲余白（枠内に余裕を持たせる）
+const SLIT_Y = 30.5;       // スリット上端（中心 y=32 になるよう調整）
+const SLIT_HEIGHT = 3;     // スリット太さ
+const SLIT_INSET = 9;      // スリット左右の余白（枠線より少し内側）
 
 async function ensureDir(p) {
   await mkdir(p, { recursive: true });
@@ -47,19 +56,24 @@ async function getFontBuffer() {
 }
 
 function buildSvg(pathData, viewBox) {
-  // viewBox: [x, y, w, h] — 文字の bounding box を中央に収める
+  // viewBox: [x, y, w, h] — 文字の bounding box を中央に収めて、枠＋スリットを重ねる
   const [x, y, w, h] = viewBox;
   const SIZE = 64;
-  const PAD = 8; // 余白（64基準）
-  const innerSize = SIZE - PAD * 2;
+  const innerSize = SIZE - KANJI_PAD * 2;
   const scale = Math.min(innerSize / w, innerSize / h);
   const tx = SIZE / 2 - (x + w / 2) * scale;
   const ty = SIZE / 2 - (y + h / 2) * scale;
+
+  const frameSize = SIZE - FRAME_INSET * 2;
+  const slitWidth = SIZE - SLIT_INSET * 2;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SIZE} ${SIZE}">
   <rect width="${SIZE}" height="${SIZE}" fill="${BG}"/>
+  <rect x="${FRAME_INSET}" y="${FRAME_INSET}" width="${frameSize}" height="${frameSize}" fill="none" stroke="${FG}" stroke-width="${FRAME_STROKE}"/>
   <g transform="translate(${tx.toFixed(3)} ${ty.toFixed(3)}) scale(${scale.toFixed(5)})">
     <path d="${pathData}" fill="${FG}"/>
   </g>
+  <rect x="${SLIT_INSET}" y="${SLIT_Y}" width="${slitWidth}" height="${SLIT_HEIGHT}" fill="${SLIT}"/>
 </svg>
 `;
 }
